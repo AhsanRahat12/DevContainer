@@ -1,0 +1,56 @@
+" Enable syntax highlighting
+syntax on
+
+" Enable file type detection
+filetype plugin indent on
+
+" Enable mouse support in all modes
+set mouse=a
+
+" Conceal markdown syntax for cleaner view
+set conceallevel=2
+
+" Show line numbers (optional but helpful)
+set number
+highlight LineNr ctermfg=240 guifg=#585858
+
+" Enable syntax highlighting inside code blocks
+let g:markdown_fenced_languages = ['html', 'python', 'bash', 'javascript', 'css', 'java', 'ruby', 'go', 'rust']
+
+" Spell Checker with a simple underline
+" Spell Checker with a simple underline
+set spell
+set spelllang=en_us
+highlight SpellBad cterm=underline ctermbg=NONE ctermfg=red guisp=red
+highlight SpellRare cterm=underline ctermbg=NONE ctermfg=NONE guisp=NONE
+highlight SpellCap cterm=underline ctermbg=NONE ctermfg=NONE guisp=NONE
+highlight SpellLocal cterm=underline ctermbg=NONE ctermfg=NONE guisp=NONE
+
+" Use system clipboard as default register
+set clipboard=unnamedplus
+
+" Ensure Vim uses filetype plugins
+filetype plugin on
+
+" Enable indentation
+filetype indent on
+
+" Set the default indentation to 2 spaces for all files
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+" Highlight trailing whitespace in all files
+" Highlight trailing whitespace in light brown
+highlight TrailingWhitespace ctermbg=brown guibg=#d7af87
+autocmd BufRead,BufNewFile * match TrailingWhitespace /\s\+$/
+
+" Enable auto-indentation
+set autoindent
+
+" Turn on syntax highlighting
+syntax on
+
+" Set backspace so it acts more intuitively
+set backspace=indent,eol,start
