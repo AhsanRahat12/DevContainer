@@ -1,8 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# Initialize chezmoi and apply dotfiles from GitHub repo
-# Skips install since mise handles that via postCreateCommand
 chezmoi init --apply git@github.com:AhsanRahat12/dotfiles.git
+/usr/local/bin/mise trust ~/dotfiles/mise.toml
 
 exit 0
