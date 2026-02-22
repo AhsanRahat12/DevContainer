@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-chezmoi init --apply git@github.com:AhsanRahat12/dotfiles.git
-/usr/local/bin/mise trust ~/dotfiles/mise.toml
-/usr/local/bin/mise trust ~/mise.toml
-exit 0
