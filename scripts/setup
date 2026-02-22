@@ -4,6 +4,4 @@
 # then installs all tools defined in it (chezmoi, kubectl etc.)
 
 
-/usr/local/bin/mise trust /workspaces/$DEVPOD_WORKSPACE_ID/mise.toml && \
-/usr/local/bin/mise trust ~/dotfiles/mise.toml && \
-/usr/local/bin/mise install
+/usr/local/bin/mise trust /workspaces/$DEVPOD_WORKSPACE_ID/mise.toml && /usr/local/bin/mise install
